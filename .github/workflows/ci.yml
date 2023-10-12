@@ -25,8 +25,8 @@ jobs:
     - name: Build
       run: ./gradlew build
     - name: Query
-      run:  ./gradlew owlQuery
-      name: Upload
+      run: ./gradlew owlQuery
+    - name: Upload
       if: ${{ always() }}
       uses: actions/upload-artifact@v3
       with:
